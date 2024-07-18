@@ -5,26 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Membership Registration Form</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="registration-form">
-        <h2>Membership Registration</h2>
+    <div class="container">
         <form id="membershipForm" action="/submit-form" method="POST">
-            <div class="form-group">
-                <label for="firstName">First Name:</label>
-                <input type="text" id="firstName" name="firstName" required>
+            <div class="row">
+                <h1>AGE Membership ID Form</h1>
+                <div class="input-group input-group-icon"><div class="input-icon"><i class="fa fa-user"></i>First Name</div>
+                    <input type="text" placeholder="First Name" name="firstName" required>
+                    
+                </div>
+                <div class="input-group input-group-icon"><div class="input-icon"><i class="fa fa-user"></i>last Name</div>
+                    <input type="text" placeholder="Last Name" name="lastName" required>
+                    
+                </div>
+                <div class="input-group">
+                    <h4>Date of Birth</h4>
+                    <div class="col-third">
+                        <input type="text" placeholder="DD" name="dobDay" required>
+                    </div>
+                    
+                    <div class="col-third">
+                        <input type="text" placeholder="MM" name="dobMonth" required>
+                    </div>
+                    
+                    <div class="col-third">
+                        <input type="text" placeholder="YYYY" name="dobYear" required>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="lastName">Last Name:</label>
-                <input type="text" id="lastName" name="lastName" required>
+            <div class="row">
+                <h4>Region</h4>
+                <div class="input-group">
+                    <select name="region" required>
+                        <option value="">Select Region</option>
+                        <option value="Ahafo">Ahafo</option>
+                        <option value="Ashanti">Ashanti</option>
+                        <option value="Bono">Bono</option>
+                        <option value="Bono East">Bono East</option>
+                        <option value="Central">Central</option>
+                        <option value="Eastern">Eastern</option>
+                        <option value="Greater Accra">Greater Accra</option>
+                        <option value="North East">North East</option>
+                        <option value="Northern">Northern</option>
+                        <option value="Oti">Oti</option>
+                        <option value="Savannah">Savannah</option>
+                        <option value="Upper East">Upper East</option>
+                        <option value="Upper West">Upper West</option>
+                        <option value="Volta">Volta</option>
+                        <option value="Western">Western</option>
+                        <option value="Western North">Western North</option>
+                    </select>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="dob">Date of Birth:</label>
-                <input type="date" id="dob" name="dob" required>
+            <div class="row">
+                <h4>Membership Details</h4>
+                <div class="input-group">
+                    <input type="number" placeholder="Member Since (Year)" name="memberSince" required>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="memberSince">Member Since (Year):</label>
-                <input type="number" id="memberSince" name="memberSince" required>
+            <div class="row">
+                <h4>Gender</h4>
+                <div class="input-group">
+                    <input id="gender-male" type="radio" name="gender" value="male">
+                    <label for="gender-male">Male</label>
+                    <input id="gender-female" type="radio" name="gender" value="female">
+                    <label for="gender-female">Female</label>
+                </div>
             </div>
             <button type="submit">Register</button>
         </form>
